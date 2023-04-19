@@ -3,48 +3,57 @@ import email.mime.multipart
 import email.mime.base
 import os
 from email.mime.text import MIMEText
-#!pip install smtplib
+from reportlab.pdfgen import canvas
 
-# Crea la conexión SMTP
-server = smtplib.SMTP('smtp-mail.outlook.com', port = 587)
+def createFile():
+    c = canvas.Canvas("hola-mundo.pdf")
+    c.drawString(50, 50, "¡Hola, mundo!")
+    
 
-correo = 'jaames11@hotmail.com'
-pas ='Wellneverdie.201'
-# Inicia sesión en tu cuenta de Gmail
-server.starttls()
+    c.save()
 
-server.login(correo, pas)
+def email():
+    # Crea la conexión SMTP
+    server = smtplib.SMTP('smtp-mail.outlook.com', port = 587)
 
-# Definir el remitente y destinatario del correo electrónico
-remitente = 'jaames11@hotmail.com'
-destinatario = 'Cuando2son1@hotmail.com'
-# destinatario = 'itzel.upiita@gmail.com'
+    correo = 'jaames11@hotmail.com'
+    pas ='Wellneverdie.201'
+    # Inicia sesión en tu cuenta de Gmail
+    server.starttls()
 
-# Crear el mensaje del correo electrónico
-mensaje = email.mime.multipart.MIMEMultipart()
-mensaje['From'] = remitente
-mensaje['To'] = destinatario
-# mensaje['Subject'] = "Correo electrónico con archivo adjunto"
-mensaje['Subject'] = "Correo electrónico de prueba"
+    server.login(correo, pas)
 
-# Añadir el cuerpo del mensaje
-cuerpo = "Hola,\n\nEste es un mensaje de prueba enviado desde Python con un archivo adjunto.\n\nSaludos,\n ThunderGer"
-mensaje.attach(email.mime.text.MIMEText(cuerpo, 'plain'))
+    # Definir el remitente y destinatario del correo electrónico
+    remitente = 'jaames11@hotmail.com'
+    # remitente = 'Cuando2son1@hotmail.com'
+    destinatario = 'kenobsta@gmail.com'
+    # destinatario = 'itzel.upiita@gmail.com'
 
-# Añadir el archivo Excel como adjunto
-ruta_archivo = 'requirements.txt'
-archivo = open(ruta_archivo, 'rb')
-adjunto = email.mime.base.MIMEBase('application', 'octet-stream')
-adjunto.set_payload((archivo).read())
-email.encoders.encode_base64(adjunto)
-adjunto.add_header('Content-Disposition', "attachment; filename= %s" % ruta_archivo)
-mensaje.attach(adjunto)
+    # Crear el mensaje del correo electrónico
+    mensaje = email.mime.multipart.MIMEMultipart()
+    mensaje['From'] = remitente
+    mensaje['To'] = destinatario
+    # mensaje['Subject'] = "Correo electrónico con archivo adjunto"
+    mensaje['Subject'] = "Correo electrónico de prueba"
 
-# Convertir el mensaje a texto plano
-texto = mensaje.as_string()
+    # Añadir el cuerpo del mensaje
+    cuerpo = "Hola,\n\nEste es un mensaje de prueba enviado desde Python con un archivo adjunto.\n\nSaludos,\n ThunderGer"
+    mensaje.attach(email.mime.text.MIMEText(cuerpo, 'plain'))
 
-# Enviar el correo electrónico
-server.sendmail(remitente, destinatario, texto)
+    # Añadir el archivo Excel como adjunto
+    ruta_archivo = 'requirements.txt'
+    archivo = open(ruta_archivo, 'rb')
+    adjunto = email.mime.base.MIMEBase('application', 'octet-stream')
+    adjunto.set_payload((archivo).read())
+    email.encoders.encode_base64(adjunto)
+    adjunto.add_header('Content-Disposition', "attachment; filename= %s" % ruta_archivo)
+    mensaje.attach(adjunto)
 
-# Cerrar la conexión SMTP
-server.quit()
+    # Convertir el mensaje a texto plano
+    texto = mensaje.as_string()
+
+    # Enviar el correo electrónico
+    server.sendmail(remitente, destinatario, texto)
+
+    # Cerrar la conexión SMTP
+    server.quit()
