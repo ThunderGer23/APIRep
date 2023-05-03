@@ -11,7 +11,23 @@ import matplotlib.pyplot as plt
 #Para las img
 from reportlab.lib.utils import ImageReader
 
-def createText(c,w:float,h:float,den:int,x:int,y:int,tamLet:int,text:str):
+#Tamaño de la hoja
+w,h=A4
+
+def dibImagen(name:str,c,x:int,y:int,px:int,py:int):
+    img=ImageReader(name)
+    #Ancho y alto de la imagen
+    img_w,img_h=img.getSize()
+    if y!=0 and px==0 and py==0:
+        return c.drawImage(img,x,y)
+    elif x==0 and y==0 and px==0 and py==0:
+        return c.drawImage(img,w-img_h,h-img_h)
+    elif px == 0 and py==0:
+        return c.drawImage(img,x,h-img_h)
+    else:
+        return c.drawImage(img,x,h+y,px,py)
+
+def createText(c,den:int,x:int,y:int,tamLet:int,text:str):
     title=c.beginText((w/den)+x,h+y)
     title.setFont("FUTURAM",tamLet)
     title.textLine(text)
@@ -28,8 +44,6 @@ def createImg(porPlag:list,section:str):
 
 
 def createFile(nameFile: str,):
-    #Tamaño de la hoja
-    w,h=A4
     print('here create file :v/')
 
     #Nombre del archivo
@@ -39,7 +53,7 @@ def createFile(nameFile: str,):
     pdfmetrics.registerFont(TTFont('FUTURAM','FUTURAM.ttf'))
 
     #Titulo
-    createText(c,w,h,4,-5,-90,24,'Reporte de analisis de Tesis')
+    createText(c,4,-5,-90,24,'Reporte de analisis de Tesis')
 
     #Dibujar una línea horizontal
     x=50
@@ -47,51 +61,55 @@ def createFile(nameFile: str,):
     c.line(x,y,w-50,y)
 
         #Dibujar imagenes
-    img_ipn=ImageReader("ipn.png")
-    #Ancho y alto de la imagen
-    img_wi, img_hi=img_ipn.getSize()
-    c.drawImage(img_ipn,10,h-img_hi)
-    img_upiita=ImageReader("upiita.png")
-    #Ancho y alto de la imagen
-    img_wu, img_hu=img_upiita.getSize()
-    c.drawImage(img_upiita,10,730)
-    img_atenea=ImageReader("atenea.png")
-    #Ancho y alto de la imagen
-    img_wu,img_ha=img_atenea.getSize()
-    c.drawImage(img_atenea,w-img_ha,h-img_ha)
+    dibImagen('ipn.png',c,10,0,0,0)
+    #img_ipn=ImageReader("ipn.png")
+    ##Ancho y alto de la imagen
+    #img_wi, img_hi=img_ipn.getSize()
+    #c.drawImage(img_ipn,10,h-img_hi)
+    dibImagen('upiita.png',c,10,730,0,0)
+    #img_upiita=ImageReader("upiita.png")
+    ##Ancho y alto de la imagen
+    #img_wu, img_hu=img_upiita.getSize()
+    #c.drawImage(img_upiita,10,730)
+    dibImagen('atenea.png',c,0,0,0,0)
+    #img_atenea=ImageReader("atenea.png")
+    ##Ancho y alto de la imagen
+    #img_wu,img_ha=img_atenea.getSize()
+    #c.drawImage(img_atenea,w-img_ha,h-img_ha)
 
     #Dibujar línea Vertical
     c.line((w/2),400,(w/2),720)
 
     #Titulo lado Izquierdo
-    createText(c,w,h,8,-5,-140,18,'Reporte de Texto')
+    createText(c,8,-5,-140,18,'Reporte de Texto')
 
     #Primer Subtitulo lado Izquierdo
-    createText(c,w,h,14,-15,-170,14,'Introducción:')
+    createText(c,14,-15,-170,14,'Introducción:')
     porPlag=[25,50,100,60,12,14,28,26,36,80,70,45,38,19,25,50]
     createImg(porPlag,'Introduccion')
-    img_Intro=ImageReader("Introduccion.png")
-    #Ancho y alto de la imagen
-    img_wIn,img_hIn=img_Intro.getSize()
-    c.drawImage(img_Intro,14,h-334,164,164)
+    dibImagen('Introduccion.png',c,14,-334,164,164)
+    #img_Intro=ImageReader("Introduccion.png")
+    ##Ancho y alto de la imagen
+    #img_wIn,img_hIn=img_Intro.getSize()
+    #c.drawImage(img_Intro,14,h-334,164,164)
 
     #Segundo Subtitulo lado Izquierdo
-    createText(c,w,h,14,-15,-340,14,'Marco Teórico:')
+    createText(c,14,-15,-340,14,'Marco Teórico:')
 
     #Titulo lado Derecho
-    createText(c,w,h,2,50,-120,18,'Reporte de Bibliografía')
+    createText(c,2,50,-140,18,'Reporte de Bibliografía')
 
     #Segunda Línea Horizontal
     c.line(x,350,w-50,350)
 
     #Titulo Inferior
-    createText(c,w,h,3,20,-520,18,'Reporte de Imágenes')
+    createText(c,3,20,-520,18,'Reporte de Imágenes')
 
     #Tercer Subtitulo lado Izquierdo
-    createText(c,w,h,14,-15,-550,14,'Marco Teórico:')
+    createText(c,14,-15,-550,14,'Marco Teórico:')
 
     #Total
-    createText(c,w,h,2,140,-820,16,'Total:')
+    createText(c,2,140,-820,16,'Total:')
 
     c.save()
     return 'ok'
