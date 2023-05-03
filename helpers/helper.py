@@ -28,10 +28,6 @@ def createFile(nameFile: str,):
 
     #Titulo
     createText(c,w,h,4,-5,-90,24,'Reporte de analisis de Tesis')
-    #title=c.beginText((w/4)-5,h-90)
-    #title.setFont("FUTURAM",24)
-    #title.textLine("Reporte de analisis de Tesis")
-    #c.drawText(title)
 
     #Dibujar una línea horizontal
     x=50
@@ -57,55 +53,27 @@ def createFile(nameFile: str,):
 
     #Titulo lado Izquierdo
     createText(c,w,h,8,-5,-140,18,'Reporte de Texto')
-    #title_left=c.beginText((w/8)-5,h-140)
-    #title_left.setFont("FUTURAM",18)
-    #title_left.textLine("Reporte de Texto")
-    #c.drawText(title_left)
 
     #Primer Subtitulo lado Izquierdo
     createText(c,w,h,14,-15,-170,14,'Introducción:')
-    #title_left1=c.beginText((w/14)-15,h-170)
-    #title_left1.setFont("FUTURAM",14)
-    #title_left1.textLine("Introducción:")
-    #c.drawText(title_left1)
 
     #Segundo Subtitulo lado Izquierdo
     createText(c,w,h,14,-15,-300,14,'Marco Teórico:')
-    #title_left2=c.beginText((w/14)-15,h-300)
-    #title_left2.setFont("FUTURAM",14)
-    #title_left2.textLine("Marco Teórico:")
-    #c.drawText(title_left2)
 
     #Titulo lado Derecho
     createText(c,w,h,2,50,-140,18,'Reporte de Bibliografía')
-    #title_right=c.beginText((w/2)+50,h-140)
-    #title_right.setFont("FUTURAM",18)
-    #title_right.textLine("Reporte de Bibliografía")
-    #c.drawText(title_right)
 
     #Segunda Línea Horizontal
     c.line(x,350,w-50,350)
 
     #Titulo Inferior
     createText(c,w,h,3,20,-520,18,'Reporte de Imágenes')
-    #title_right=c.beginText((w/3)+20,h-520)
-    #title_right.setFont("FUTURAM",18)
-    #title_right.textLine("Reporte de Imágenes")
-    #c.drawText(title_right)
 
     #Tercer Subtitulo lado Izquierdo
     createText(c,w,h,14,-15,-550,14,'Marco Teórico:')
-    #title_left2=c.beginText((w/14)-15,h-550)
-    #title_left2.setFont("FUTURAM",14)
-    #title_left2.textLine("Marco Teórico:")
-    #c.drawText(title_left2)
 
     #Total
     createText(c,w,h,2,140,-820,16,'Total:')
-    #title_right=c.beginText((w/2)+140,h-820)
-    #title_right.setFont("FUTURAM",16)
-    #title_right.textLine("Total:")
-    #c.drawText(title_right)
 
     c.save()
     return 'ok'
