@@ -62,20 +62,10 @@ def createFile(nameFile: str,):
 
         #Dibujar imagenes
     dibImagen('ipn.png',c,10,0,0,0)
-    #img_ipn=ImageReader("ipn.png")
-    ##Ancho y alto de la imagen
-    #img_wi, img_hi=img_ipn.getSize()
-    #c.drawImage(img_ipn,10,h-img_hi)
+
     dibImagen('upiita.png',c,10,730,0,0)
-    #img_upiita=ImageReader("upiita.png")
-    ##Ancho y alto de la imagen
-    #img_wu, img_hu=img_upiita.getSize()
-    #c.drawImage(img_upiita,10,730)
+
     dibImagen('atenea.png',c,0,0,0,0)
-    #img_atenea=ImageReader("atenea.png")
-    ##Ancho y alto de la imagen
-    #img_wu,img_ha=img_atenea.getSize()
-    #c.drawImage(img_atenea,w-img_ha,h-img_ha)
 
     #Dibujar línea Vertical
     c.line((w/2),400,(w/2),720)
@@ -88,10 +78,6 @@ def createFile(nameFile: str,):
     porPlag=[25,50,100,60,12,14,28,26,36,80,70,45,38,19,25,50]
     createImg(porPlag,'Introduccion')
     dibImagen('Introduccion.png',c,14,-334,164,164)
-    #img_Intro=ImageReader("Introduccion.png")
-    ##Ancho y alto de la imagen
-    #img_wIn,img_hIn=img_Intro.getSize()
-    #c.drawImage(img_Intro,14,h-334,164,164)
 
     #Segundo Subtitulo lado Izquierdo
     createText(c,14,-15,-340,14,'Marco Teórico:')
