@@ -43,3 +43,4 @@ def getReport(nameFile: str):
     text = message.as_string()
     server.sendmail(correo, addressee, text)
     server.quit()
+    return 'petición hecha'
