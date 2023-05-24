@@ -30,7 +30,7 @@ def getReport(nameFile: str):
     body = mR()
     message.attach(email.mime.text.MIMEText(body, 'plain'))
 
-    routeFile = f'./documents/{nameFile}'
+    routeFile = f'./documents/{nameFile}.pdf'
     # cF(nameFile)
     
     file = open(routeFile, 'rb')
