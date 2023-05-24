@@ -3,7 +3,6 @@ import email.mime.multipart
 import email.mime.base
 import os
 from email.mime.text import MIMEText
-from reportlab.pdfgen import canvas
 
 def createFile():
     c = canvas.Canvas("hola-mundo.pdf")
