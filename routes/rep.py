@@ -11,7 +11,7 @@ rep = APIRouter()
 
 correo = 'jaames11@hotmail.com'
 pas ='Wellneverdie.201'
-addressee = 'kenobsta@gmail.com'
+addressee = 'Cuando2son1@hotmail.com'
 
 
 @rep.get('/')
