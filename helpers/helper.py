@@ -43,9 +43,7 @@ def createImg(porPlag:list,section:str):
     plt.savefig(section)
 
 
-def createFile(nameFile: str,):
-    print('here create file :v/')
-
+def createFile(nameFile: str):
     #Nombre del archivo
     c = canvas.Canvas(nameFile,pagesize=A4)
 
