@@ -2,7 +2,7 @@ from reportlab.lib.pagesizes import A4
 from reportlab.pdfgen import canvas
 
 #Para el tipo de letras
-# from reportlab.pdfbase import pdfmetrics
+from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 
 #Para la grafica
