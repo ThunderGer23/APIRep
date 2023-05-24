@@ -39,7 +39,7 @@ def createImg(porPlag:list,section:str):
 
 
 def createFile(nameFile: str):
-    c = canvas.Canvas(nameFile,pagesize=A4)
+    c = canvas.Canvas(f'./documents/{nameFile}.pdf',pagesize=A4)
     pdfmetrics.registerFont(TTFont('FUTURAM','./helpers/FUTURAM.ttf'))
     createText(c,4,-5,-90,24,'Reporte de analisis de Tesis')
 
