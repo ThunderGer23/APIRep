@@ -3,4 +3,4 @@ nixPkgs = ['python38', 'gcc']
 
 [start]
 onlyIncludeFiles = ['./']
-cmd = "ls"
+cmd = "ls /helpers"
