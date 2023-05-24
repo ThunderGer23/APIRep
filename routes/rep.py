@@ -9,12 +9,10 @@ from helpers.respuestas import messageResp as mR
 
 rep = APIRouter()
 
+correo = 'jaames11@hotmail.com'
 pas ='Wellneverdie.201'
-email = 'jaames11@hotmail.com'
 addressee = 'kenobsta@gmail.com'
-server = smtplib.SMTP('smtp-mail.outlook.com', port = 587)
-server.starttls()
-server.login(email, pas)
+
 
 @rep.get('/')
 def home():
@@ -22,8 +20,11 @@ def home():
 
 @rep.get('/getReport')
 def getReport(nameFile: str):
+    server = smtplib.SMTP('smtp-mail.outlook.com', port = 587)
+    server.starttls()
+    server.login(correo, pas)
     message = email.mime.multipart.MIMEMultipart()
-    message['From'] = email
+    message['From'] = correo
     message['To'] = addressee
     message['Subject'] = f"Resultados de plagio encontrados en {nameFile}"
     body = mR()
@@ -38,6 +39,7 @@ def getReport(nameFile: str):
     email.encoders.encode_base64(adjunct)
     adjunct.add_header('Content-Disposition', "attachment; filename= %s" % routeFile)
     message.attach(adjunct)
+
     text = message.as_string()
-    server.sendmail(email, addressee, text)
+    server.sendmail(correo, addressee, text)
     server.quit()
