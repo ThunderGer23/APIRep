@@ -59,11 +59,11 @@ def createFile(nameFile: str):
     c.line(x,y,w-50,y)
 
         #Dibujar imagenes
-    dibImagen('ipn.png',c,10,0,0,0)
+    dibImagen('./helpers/ipn.png',c,10,0,0,0)
 
-    dibImagen('upiita.png',c,10,730,0,0)
+    dibImagen('./helpers/upiita.png',c,10,730,0,0)
 
-    dibImagen('atenea.png',c,0,0,0,0)
+    dibImagen('./helpers/atenea.png',c,0,0,0,0)
 
     #Dibujar línea Vertical
     c.line((w/2),400,(w/2),720)
