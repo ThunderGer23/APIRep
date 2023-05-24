@@ -37,7 +37,7 @@ def getReport(nameFile: str):
     adjunct = email.mime.base.MIMEBase('application', 'octet-stream')
     adjunct.set_payload(file.read())
     email.encoders.encode_base64(adjunct)
-    adjunct.add_header('Content-Disposition', "attachment; filename= %s" % nameFile)
+    adjunct.add_header('Content-Disposition', "attachment; filename= %s" % f'{nameFile}.pdf')
     message.attach(adjunct)
 
     text = message.as_string()
