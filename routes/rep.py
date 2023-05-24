@@ -31,7 +31,7 @@ def getReport(nameFile: str):
     message.attach(email.mime.text.MIMEText(body, 'plain'))
 
     routeFile = f'/documents/{nameFile}'
-    cF(nameFile)
+    # cF(nameFile)
     
     file = open(routeFile, 'rb')
     adjunct = email.mime.base.MIMEBase('application', 'octet-stream')
