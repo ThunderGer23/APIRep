@@ -2,7 +2,7 @@ from reportlab.lib.pagesizes import A4
 from reportlab.pdfgen import canvas
 
 #Para el tipo de letras
-from reportlab.pdfbase import pdfmetrics
+# from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 
 #Para la grafica
@@ -50,7 +50,7 @@ def createFile(nameFile: str,):
     c = canvas.Canvas(nameFile,pagesize=A4)
 
     #Tipo de letra
-    pdfmetrics.registerFont(TTFont('FUTURAM','/helpers/FUTURAM.ttf'))
+    # pdfmetrics.registerFont(TTFont('FUTURAM','/helpers/FUTURAM.ttf'))
 
     #Titulo
     createText(c,4,-5,-90,24,'Reporte de analisis de Tesis')
