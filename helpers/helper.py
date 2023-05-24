@@ -50,7 +50,7 @@ def createFile(nameFile: str,):
     c = canvas.Canvas(nameFile,pagesize=A4)
 
     #Tipo de letra
-    pdfmetrics.registerFont(TTFont('FUTURAM','FUTURAM.ttf'))
+    pdfmetrics.registerFont(TTFont('FUTURAM','/helpers/FUTURAM.ttf'))
 
     #Titulo
     createText(c,4,-5,-90,24,'Reporte de analisis de Tesis')
