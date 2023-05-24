@@ -30,14 +30,14 @@ def getReport(nameFile: str):
     body = mR()
     message.attach(email.mime.text.MIMEText(body, 'plain'))
 
-    routeFile = f'./documents/{nameFile}.pdf'
+    routeFile = f'./documents/{nameFile}'
     # cF(nameFile)
     
     file = open(routeFile, 'rb')
     adjunct = email.mime.base.MIMEBase('application', 'octet-stream')
     adjunct.set_payload(file.read())
     email.encoders.encode_base64(adjunct)
-    adjunct.add_header('Content-Disposition', "attachment; filename= %s" % nameFile )
+    adjunct.add_header('Content-Disposition', "attachment; filename= %s" % nameFile)
     message.attach(adjunct)
 
     text = message.as_string()
