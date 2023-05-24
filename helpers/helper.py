@@ -29,7 +29,7 @@ def dibImagen(name:str,c,x:int,y:int,px:int,py:int):
 
 def createText(c,den:int,x:int,y:int,tamLet:int,text:str):
     title=c.beginText((w/den)+x,h+y)
-    title.setFont("FUTURAM",tamLet)
+    # title.setFont("FUTURAM",tamLet)
     title.textLine(text)
     return c.drawText(title)
 
