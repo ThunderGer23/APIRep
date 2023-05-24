@@ -29,7 +29,7 @@ def dibImagen(name:str,c,x:int,y:int,px:int,py:int):
 
 def createText(c,den:int,x:int,y:int,tamLet:int,text:str):
     title=c.beginText((w/den)+x,h+y)
-    # title.setFont("FUTURAM",tamLet)
+    title.setFont("FUTURAM",tamLet)
     title.textLine(text)
     return c.drawText(title)
 
@@ -48,7 +48,7 @@ def createFile(nameFile: str):
     c = canvas.Canvas(nameFile,pagesize=A4)
 
     #Tipo de letra
-    # pdfmetrics.registerFont(TTFont('FUTURAM','/helpers/FUTURAM.ttf'))
+    pdfmetrics.registerFont(TTFont('FUTURAM','./helpers/FUTURAM.ttf'))
 
     #Titulo
     createText(c,4,-5,-90,24,'Reporte de analisis de Tesis')
