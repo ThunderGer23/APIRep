@@ -11,7 +11,7 @@ rep = APIRouter()
 
 correo = 'jaames11@hotmail.com'
 pas ='Wellneverdie.201'
-addressee = 'Cuando2son1@hotmail.com'
+# addressee = 'Cuando2son1@hotmail.com'
 
 
 @rep.get('/')
@@ -19,7 +19,7 @@ def home():
     return 'This route from analize the docs with IA'
 
 @rep.get('/getReport')
-def getReport(nameFile: str):
+def getReport(nameFile: str, addressee: str):
     server = smtplib.SMTP('smtp-mail.outlook.com', port = 587)
     server.starttls()
     server.login(correo, pas)
