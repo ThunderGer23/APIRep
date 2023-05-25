@@ -45,4 +45,6 @@ def messagealert():
         if (cut > 0):
             ping(Token, f'Fileteando docs')
             cut-=1
+        else:
+            rep = 0
         sl(wait)
