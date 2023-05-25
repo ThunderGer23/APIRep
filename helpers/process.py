@@ -25,8 +25,7 @@ def messagealert():
     while rep > 0:
         wait = ri(0, 100)*0.01
 
-        if (scrapp > 0 ):
-            ping(Token, f'Iniciando Busqueda en repositorios')
+        while scrapp > 0 :
             if (unam > 0):
                 ping(Token, UNAM())
                 unam -=1
@@ -41,10 +40,21 @@ def messagealert():
                 ipn -=1
             else:
                 scrapp = 0
-        ping(Token, f'Fileteando documentos')
         if (cut > 0):
             ping(Token, f'Fileteando docs')
             cut-=1
+        if (toImg > 0):
+            ping(Token, f'Fileteando docs')
+            toImg-=1
+        if (para > 0):
+            ping(Token, f'Fileteando docs')
+            para-=1
+        if (img > 0):
+            ping(Token, f'Fileteando docs')
+            img-=1
+        if (cita > 0):
+            ping(Token, f'Fileteando docs')
+            cita-=1
         else:
             rep = 0
         sl(wait)
