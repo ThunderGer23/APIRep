@@ -48,5 +48,120 @@ resp = [
     "Hemos analizado tu tesis y los resultados están listos para ser descargados en un PDF. ¡Que la fuerza te acompañe!"
 ]
 
+resp1 = [
+    "Buscando tesis en los repositorios de la UNAM. Espere, por favor.",
+    "Estamos buscando tesis en la UNAM. Un momento, por favor.",
+    "Consultando repositorios de la UNAM. Paciencia, por favor.",
+    "Búsqueda de tesis en curso. Accediendo a la UNAM.",
+    "Recopilando tesis de la UNAM. Aguarde, por favor.",
+    "Obteniendo información sobre tesis en la UNAM. Espere un momento.",
+    "Buscando tesis. Accediendo a la UNAM. Gracias por su paciencia.",
+    "Consultando la UNAM en busca de tesis. Un momento, por favor.",
+    "Buscando tesis en la UNAM. Paciencia mientras completamos la búsqueda.",
+    "Estamos consultando la UNAM en busca de tesis. Por favor, espere.",
+    "Recopilando tesis. Consultando la UNAM. Paciencia, por favor.",
+    "Búsqueda de tesis en curso. Accediendo a la UNAM. Gracias por su espera.",
+    "Obteniendo información sobre tesis. Espere unos momentos.",
+    "Buscando tesis. Consultando la UNAM. Le pedimos paciencia.",
+    "Accediendo a la UNAM para buscar tesis. Un momento, por favor.",
+    "Buscando tesis en la UNAM. Le agradecemos su paciencia.",
+    "Consultando la UNAM en busca de tesis. Por favor, espere unos momentos.",
+    "Recopilando tesis de la UNAM. Aguarde un momento.",
+    "Obteniendo información sobre tesis. Espere un instante.",
+    "Buscando tesis. Consultando la UNAM. Gracias por su espera.",
+    "Accediendo a la UNAM para buscar tesis. Por favor, tenga paciencia.",
+    "Buscando tesis en la UNAM. Paciencia mientras completamos la búsqueda.",
+    "Estamos consultando la UNAM en busca de tesis. Por favor, espere unos momentos."
+]
+
+resp_uam = [
+    "Buscando tesis en los repositorios de la UAM. Espere, por favor.",
+    "Estamos buscando tesis en la UAM. Un momento, por favor.",
+    "Consultando repositorios de la UAM. Paciencia, por favor.",
+    "Búsqueda de tesis en curso. Accediendo a la UAM.",
+    "Recopilando tesis de la UAM. Aguarde, por favor.",
+    "Obteniendo información sobre tesis en la UAM. Espere un momento.",
+    "Buscando tesis. Accediendo a la UAM. Gracias por su paciencia.",
+    "Consultando la UAM en busca de tesis. Un momento, por favor.",
+    "Buscando tesis en la UAM. Paciencia mientras completamos la búsqueda.",
+    "Estamos consultando la UAM en busca de tesis. Por favor, espere.",
+    "Recopilando tesis. Consultando la UAM. Paciencia, por favor.",
+    "Búsqueda de tesis en curso. Accediendo a la UAM. Gracias por su espera.",
+    "Obteniendo información sobre tesis. Espere unos momentos.",
+    "Buscando tesis. Consultando la UAM. Le pedimos paciencia.",
+    "Accediendo a la UAM para buscar tesis. Un momento, por favor.",
+    "Buscando tesis en la UAM. Le agradecemos su paciencia.",
+    "Consultando la UAM en busca de tesis. Por favor, espere unos momentos.",
+    "Recopilando tesis de la UAM. Aguarde un momento.",
+    "Obteniendo información sobre tesis. Espere un instante.",
+    "Buscando tesis. Consultando la UAM. Gracias por su espera.",
+    "Accediendo a la UAM para buscar tesis. Por favor, tenga paciencia.",
+    "Buscando tesis en la UAM. Paciencia mientras completamos la búsqueda.",
+    "Estamos consultando la UAM en busca de tesis. Por favor, espere unos momentos."
+]
+
+resp_tec = [
+    "Buscando tesis en los repositorios del Tecnológico de Monterrey. Espere, por favor.",
+    "Estamos buscando tesis en el Tecnológico de Monterrey. Un momento, por favor.",
+    "Consultando repositorios del Tecnológico de Monterrey. Paciencia, por favor.",
+    "Búsqueda de tesis en curso. Accediendo al Tecnológico de Monterrey.",
+    "Recopilando tesis del Tecnológico de Monterrey. Aguarde, por favor.",
+    "Obteniendo información sobre tesis en el Tecnológico de Monterrey. Espere un momento.",
+    "Buscando tesis. Accediendo al Tecnológico de Monterrey. Gracias por su paciencia.",
+    "Consultando el Tecnológico de Monterrey en busca de tesis. Un momento, por favor.",
+    "Buscando tesis en el Tecnológico de Monterrey. Paciencia mientras completamos la búsqueda.",
+    "Estamos consultando el Tecnológico de Monterrey en busca de tesis. Por favor, espere.",
+    "Recopilando tesis. Consultando el Tecnológico de Monterrey. Paciencia, por favor.",
+    "Búsqueda de tesis en curso. Accediendo al Tecnológico de Monterrey. Gracias por su espera.",
+    "Obteniendo información sobre tesis. Espere unos momentos.",
+    "Buscando tesis. Consultando el Tecnológico de Monterrey. Le pedimos paciencia.",
+    "Accediendo al Tecnológico de Monterrey para buscar tesis. Un momento, por favor.",
+    "Buscando tesis en el Tecnológico de Monterrey. Le agradecemos su paciencia.",
+    "Consultando el Tecnológico de Monterrey en busca de tesis. Por favor, espere unos momentos.",
+    "Recopilando tesis del Tecnológico de Monterrey. Aguarde un momento.",
+    "Obteniendo información sobre tesis. Espere un instante.",
+    "Buscando tesis. Consultando el Tecnológico de Monterrey. Gracias por su espera.",
+    "Accediendo al Tecnológico de Monterrey para buscar tesis. Por favor, tenga paciencia.",
+    "Buscando tesis en el Tecnológico de Monterrey. Paciencia mientras completamos la búsqueda.",
+    "Estamos consultando el Tecnológico de Monterrey en busca de tesis. Por favor, espere unos momentos."
+]
+
+resp2 = [
+    "Buscando en repositorios del Poli. Espera, por favor.",
+    "Recopilando info del Poli. Paciencia, pronto mostraré resultados.",
+    "Consultando repositorios del Poli. Un momento, por favor.",
+    "Búsqueda en archivos del Poli en curso. Necesito más tiempo.",
+    "Trabajando para obtener datos del Poli. Gracias por esperar.",
+    "En proceso de búsqueda en el Poli. Pronto mostraré resultados.",
+    "Revisando repositorios del Poli. Espera un momento.",
+    "Recopilando info académica del Poli. Pronto mostraré resultados.",
+    "Repositorios del Poli están siendo revisados. Gracias por tu paciencia.",
+    "Búsqueda en archivos del Poli en progreso. Un poco más de tiempo.",
+    "Consultando recursos académicos del Poli. Espera, por favor.",
+    "Revisando repositorios del Poli. Te mostraré resultados pronto.",
+    "Recopilando datos del Poli. Gracias por tu paciencia.",
+    "Trabajando en búsqueda en repositorios del Poli. Resultados en breve.",
+    "Consultando registros académicos del Poli. Espera un momento.",
+    "Búsqueda en repositorios del Poli en curso. Resultados próximamente.",
+    "Recabando información del Poli. Un momento, por favor.",
+    "Investigando en archivos del Poli. Ten paciencia, por favor.",
+    "Trabajando para encontrar info en el Poli. Pronto te la mostraré.",
+    "Revisando recursos académicos del Poli. Espera, por favor."
+]
+
+
+
+def messageAPICutRespUNAM():
+    return resp1[ran(0, len(resp1))]
+
+def messageAPICutRespUAM():
+    return resp_uam[ran(0, len(resp_uam))]
+
+def messageAPICutRespTec():
+    return resp_tec[ran(0, len(resp_tec))]
+
+def messageAPICutPoli():
+    return resp2[ran(0, len(resp2))]
+
 def messageResp():
     return resp[ran(0, len(resp))]
