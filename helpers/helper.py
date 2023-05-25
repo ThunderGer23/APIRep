@@ -11,16 +11,16 @@ W,H=A4
 def dibImagen(name:str, c, x:int, y:int, px:int, py:int):
     img=ImageReader(name)
     img_w,img_h=img.getSize()
-    # if y!=0 and px==0 and py==0:
-    #     return c.drawImage(img,x,y)
-    # elif x==0 and y==0 and px==0 and py==0:
-    #     return c.drawImage(img,W-img_h,H-img_h)
-    # elif px == 0 and py==0:
-    #     return c.drawImage(img,x,H-img_h)
-    # else:
-    #     return c.drawImage(img,x,H+y,px,py)
+    if y!=0 and px==0 and py==0:
+        return c.drawImage(img,x,y)
+    elif x==0 and y==0 and px==0 and py==0:
+        return c.drawImage(img,W-img_h,H-img_h)
+    elif px == 0 and py==0:
+        return c.drawImage(img,x,H-img_h)
+    else:
+        return c.drawImage(img,x,H+y,px,py)
     
-    return (((c.drawImage(img,x,H-img_h),c.drawImage(img,W-img_h,H-img_h))[x == 0 and y == 0],c.drawImage(img,x,y))[y != 0],c.drawImage(img,x,H+y,px,py))[px == 0 and py == 0]
+    # return (((c.drawImage(img,x,H-img_h),c.drawImage(img,W-img_h,H-img_h))[x == 0 and y == 0],c.drawImage(img,x,y))[y != 0],c.drawImage(img,x,H+y,px,py))[px == 0 and py == 0]
 
 
 
