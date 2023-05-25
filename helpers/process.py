@@ -1,4 +1,5 @@
 from time import sleep as sl
+from time import sleep_ms as slm
 from notigram import ping
 
 def messagealert():
@@ -8,4 +9,4 @@ def messagealert():
         ping('daa39d53-6283-47a1-b945-b7ee6528dde0', f'Restan {time} seg')
         # print("Enviando mensaje")
         time-=1
-        sl(1)
+        slm(1)
