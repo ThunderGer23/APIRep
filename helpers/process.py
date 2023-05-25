@@ -23,7 +23,6 @@ def messagealert():
     rep = 1 # 1% Reporte -> ApiRep
 
     while rep > 0:
-        wait = ri(0, 100)*0.01
         while scrapp > 0 :
             if (unam > 0):
                 ping(Token, UNAM())
@@ -39,7 +38,6 @@ def messagealert():
                 ipn -=1
             else:
                 scrapp = 0
-        print(f'{cut} {toImg} {para} {img} {cita}')
         if (cut > 0):
             ping(Token, f'Fileteando docs')
             cut-=1
@@ -57,4 +55,5 @@ def messagealert():
             cita-=1
         else:
             rep = 0
-        sl(wait)
+        time -= 1
+        sl(time)
