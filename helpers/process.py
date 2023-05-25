@@ -11,10 +11,10 @@ Token = 'daa39d53-6283-47a1-b945-b7ee6528dde0'
 def messagealert():
     time = ri(1500, 2400) # (24-40)min
     scrapp = time*.10    # ApiScrapp
-    unam = scrapp *.3
-    uam = scrapp *.3
-    tec = scrapp *.3
-    ipn = scrapp *.1
+    unam = scrapp *.04
+    uam = scrapp *.04
+    tec = scrapp *.04
+    ipn = scrapp *.01
     cut = time*.10 # 15% Cortes -> APICutText,
     toImg = time*.5 # 10% ImgtoText-> ApiImg,
     para = time*.50 # 50% Texto -> ApiPara,
