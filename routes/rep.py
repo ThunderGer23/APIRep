@@ -48,4 +48,4 @@ def getReport(nameFile: str, addressee: str):
     text = message.as_string()
     server.sendmail(correo, addressee, text)
     server.quit()
-    return 'petición hecha'
+    return 'Analizando, cuando el documento este listo será notificado directamente a su correo'
