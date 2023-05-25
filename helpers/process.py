@@ -20,7 +20,7 @@ def messagealert():
     para = time*.50 # 50% Texto -> ApiPara,
     img = time*.20 # 20% Img -> Apimg,
     cita = time*.04 # 4% Citas -> ApiCita,
-    rep = time*0.1 # 1% Reporte -> ApiRep
+    rep = 1 # 1% Reporte -> ApiRep
 
     while rep > 0:
         wait = ri(0, 100)*0.01
@@ -44,16 +44,16 @@ def messagealert():
             ping(Token, f'Fileteando docs')
             cut-=1
         if (toImg > 0):
-            ping(Token, f'Fileteando docs')
+            ping(Token, f'Convirtiendo Imagenes')
             toImg-=1
         if (para > 0):
-            ping(Token, f'Fileteando docs')
+            ping(Token, f'Analizando docs')
             para-=1
         if (img > 0):
-            ping(Token, f'Fileteando docs')
+            ping(Token, f'Analizando imgs')
             img-=1
         if (cita > 0):
-            ping(Token, f'Fileteando docs')
+            ping(Token, f'Analizando citas')
             cita-=1
         else:
             rep = 0
