@@ -1,5 +1,4 @@
 from time import sleep as sl
-from time import sleep_ms as slm
 from notigram import ping
 from random import randint as ri
 from helpers.respuestas import messageAPICutRespUNAM as UNAM
@@ -46,4 +45,4 @@ def messagealert():
         if (cut > 0):
             ping(Token, f'Fileteando docs')
             cut-=1
-        slm(wait)
+        sl(wait)
