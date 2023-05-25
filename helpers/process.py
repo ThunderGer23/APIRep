@@ -24,7 +24,6 @@ def messagealert():
 
     while rep > 0:
         wait = ri(0, 100)*0.01
-        print(f'{unam} {uam} {tec} {ipn}')
         while scrapp > 0 :
             if (unam > 0):
                 ping(Token, UNAM())
@@ -40,6 +39,7 @@ def messagealert():
                 ipn -=1
             else:
                 scrapp = 0
+        print(f'{cut} {toImg} {para} {img} {cita}')
         if (cut > 0):
             ping(Token, f'Fileteando docs')
             cut-=1
