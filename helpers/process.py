@@ -24,7 +24,7 @@ def messagealert():
 
     while rep > 0:
         wait = ri(0, 100)*0.01
-
+        print(f'{unam} {uam} {tec} {ipn}')
         while scrapp > 0 :
             if (unam > 0):
                 ping(Token, UNAM())
