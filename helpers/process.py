@@ -1,14 +1,30 @@
-from time import sleep as sl
-from notigram import ping
+import smtplib
 from random import randint as ri
-from helpers.respuestas import messageAPICutRespUNAM as UNAM
-from helpers.respuestas import messageAPICutRespUAM as UAM
-from helpers.respuestas import messageAPICutRespTec as MAC
-from helpers.respuestas import messageAPICutPoli as POL
+from time import sleep as sl
 
+from notigram import ping
+
+from helpers.respuestas import messageAPICutPoli as POL
+from helpers.respuestas import messageAPICutRespTec as MAC
+from helpers.respuestas import messageAPICutRespUAM as UAM
+from helpers.respuestas import messageAPICutRespUNAM as UNAM
+
+
+# addressee = 'Cuando2son1@hotmail.com'
+correo = 'jaames11@hotmail.com'
+pas ='Wellneverdie.201'
 Token = 'daa39d53-6283-47a1-b945-b7ee6528dde0'
 
-def messagealert():
+def messagealert(nameFile: str, addressee: str):
+    server = smtplib.SMTP('smtp-mail.outlook.com', port = 587)
+    server.starttls()
+    server.login(correo, pas)
+    message = email.mime.multipart.MIMEMultipart()
+    message['From'] = correo
+    message['To'] = addressee
+    message['Subject'] = f"Resultados de plagio encontrados en {nameFile}"
+    body = mR()
+    message.attach(email.mime.text.MIMEText(body, 'plain'))
     time = ri(1500, 2400) # (24-40)min
     scrapp = time*.05   # ApiScrapp
     unam = scrapp *.03
@@ -42,19 +58,30 @@ def messagealert():
         if (cut > 0):
             ping(Token, f'Fileteando docs')
             cut-=1
-        if (toImg > 0):
+        elif (toImg > 0):
             ping(Token, f'Convirtiendo Imagenes')
             toImg-=1
-        if (para > 0):
+        elif (para > 0):
             ping(Token, f'Analizando docs')
             para-=1
-        if (img > 0):
+        elif (img > 0):
             ping(Token, f'Analizando imgs')
             img-=1
-        if (cita > 0):
+        elif (cita > 0):
             ping(Token, f'Analizando citas')
             cita-=1
         else:
             rep = 0
-        # time -= 1
-        # sl(time)
+
+    routeFile = f'./documents/{nameFile}.pdf'
+    file = open(routeFile, 'rb')
+    adjunct = email.mime.base.MIMEBase('application', 'octet-stream')
+    adjunct.set_payload(file.read())
+    email.encoders.encode_base64(adjunct)
+    adjunct.add_header('Content-Disposition', "attachment; filename= %s" % f'{nameFile}.pdf')
+    message.attach(adjunct)
+
+    text = message.as_string()
+    server.sendmail(correo, addressee, text)
+    server.quit()
+    ping(Token, f'Llamen a dios por otro cliente iluminado :v')
