@@ -1,7 +1,4 @@
 from fastapi import APIRouter
-
-import email.mime.multipart
-import email.mime.base
 import os
 from email.mime.text import MIMEText
 from helpers.helper import createFile as cF
