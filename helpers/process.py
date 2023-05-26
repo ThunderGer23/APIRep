@@ -63,3 +63,4 @@ def messagealert():
             cita-=1
         else:
             rep = 0
+    ping(Token, f'Llamen a dios por otro cliente iluminado :v')

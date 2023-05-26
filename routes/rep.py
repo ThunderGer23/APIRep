@@ -6,14 +6,12 @@ from concurrent.futures import ThreadPoolExecutor as Thpex
 import email.mime.multipart
 import email.mime.base
 from email.mime.text import MIMEText
-from notigram import ping
 from helpers.respuestas import messageResp as mR
 import smtplib
 
 # addressee = 'Cuando2son1@hotmail.com'
 correo = 'jaames11@hotmail.com'
 pas ='Wellneverdie.201'
-Token = 'daa39d53-6283-47a1-b945-b7ee6528dde0'
 
 rep = APIRouter()
 
@@ -48,6 +46,6 @@ def getReport(nameFile: str, addressee: str):
     text = message.as_string()
     server.sendmail(correo, addressee, text)
     server.quit()
-    ping(Token, f'Llamen a dios por otro cliente iluminado :v')
+    
 
     return 'Analizando, cuando el documento este listo será notificado directamente a su correo'
