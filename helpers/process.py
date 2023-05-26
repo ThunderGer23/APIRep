@@ -11,15 +11,15 @@ Token = 'daa39d53-6283-47a1-b945-b7ee6528dde0'
 def messagealert():
     time = ri(1500, 2400) # (24-40)min
     scrapp = time*.05   # ApiScrapp
-    unam = scrapp *.4
-    uam = scrapp *.4
-    tec = scrapp *.4
-    ipn = scrapp *.1
+    unam = scrapp *.03
+    uam = scrapp *.03
+    tec = scrapp *.03
+    ipn = scrapp *.01
     cut = time*.10 # 15% Cortes -> APICutText,
-    toImg = time*.5 # 10% ImgtoText-> ApiImg,
+    toImg = time*.10 # 10% ImgtoText-> ApiImg,
     para = time*.50 # 50% Texto -> ApiPara,
     img = time*.20 # 20% Img -> Apimg,
-    cita = time*.04 # 4% Citas -> ApiCita,
+    cita = time*.05 # 4% Citas -> ApiCita,
     rep = 1 # 1% Reporte -> ApiRep
 
     while rep > 0:
@@ -38,6 +38,7 @@ def messagealert():
                 ipn -=1
             else:
                 scrapp = 0
+        print(f'{cut} {toImg} {para} {img} {cita}')
         if (cut > 0):
             ping(Token, f'Fileteando docs')
             cut-=1
@@ -55,5 +56,5 @@ def messagealert():
             cita-=1
         else:
             rep = 0
-        time -= 1
-        sl(time)
+        # time -= 1
+        # sl(time)
