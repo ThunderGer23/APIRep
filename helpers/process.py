@@ -5,6 +5,7 @@ from time import sleep as sl
 from notigram import ping
 import email.mime.multipart
 import email.mime.base
+from helpers.respuestas import messageResp as mR
 from helpers.respuestas import messageAPICutPoli as POL
 from helpers.respuestas import messageAPICutRespTec as MAC
 from helpers.respuestas import messageAPICutRespUAM as UAM
