@@ -1,11 +1,9 @@
-import smtplib
+
 from random import randint as ri
 from time import sleep as sl
 
 from notigram import ping
-import email.mime.multipart
-import email.mime.base
-from helpers.respuestas import messageResp as mR
+
 from helpers.respuestas import messageAPICutPoli as POL
 from helpers.respuestas import messageAPICutRespTec as MAC
 from helpers.respuestas import messageAPICutRespUAM as UAM
@@ -65,25 +63,3 @@ def messagealert(nameFile: str, addressee: str):
             cita-=1
         else:
             rep = 0
-
-    server = smtplib.SMTP('smtp-mail.outlook.com', port = 587)
-    server.starttls()
-    server.login(correo, pas)
-    message = email.mime.multipart.MIMEMultipart()
-    message['From'] = correo
-    message['To'] = addressee
-    message['Subject'] = f"Resultados de plagio encontrados en {nameFile}"
-    body = mR()
-    message.attach(email.mime.text.MIMEText(body, 'plain'))
-    routeFile = f'./documents/{nameFile}.pdf'
-    file = open(routeFile, 'rb')
-    adjunct = email.mime.base.MIMEBase('application', 'octet-stream')
-    adjunct.set_payload(file.read())
-    email.encoders.encode_base64(adjunct)
-    adjunct.add_header('Content-Disposition', "attachment; filename= %s" % f'{nameFile}.pdf')
-    message.attach(adjunct)
-
-    text = message.as_string()
-    server.sendmail(correo, addressee, text)
-    server.quit()
-    ping(Token, f'Llamen a dios por otro cliente iluminado :v')
