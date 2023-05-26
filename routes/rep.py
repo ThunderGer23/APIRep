@@ -6,6 +6,7 @@ from concurrent.futures import ThreadPoolExecutor as Thpex
 import email.mime.multipart
 import email.mime.base
 from email.mime.text import MIMEText
+from notigram import ping
 from helpers.respuestas import messageResp as mR
 import smtplib
 
