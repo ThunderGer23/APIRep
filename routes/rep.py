@@ -17,4 +17,5 @@ def getReport(nameFile: str, addressee: str):
     cF(nameFile)
     executor = Thpex()
     executor.submit(messAl(nameFile, addressee))
+    print('Analizando Documentos')
     return 'Analizando, cuando el documento este listo será notificado directamente a su correo'
