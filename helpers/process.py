@@ -15,7 +15,7 @@ correo = 'jaames11@hotmail.com'
 pas ='Wellneverdie.201'
 Token = 'daa39d53-6283-47a1-b945-b7ee6528dde0'
 
-def messagealert(nameFile: str, addressee: str):
+def messagealert():
     time = ri(1500, 2400) # (24-40)min
     scrapp = time*.05   # ApiScrapp
     unam = scrapp *.03

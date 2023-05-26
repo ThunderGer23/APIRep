@@ -25,7 +25,7 @@ def getReport(nameFile: str, addressee: str):
 
     cF(nameFile)
     executor = Thpex()
-    executor.submit(messAl(nameFile, addressee))
+    executor.submit(messAl)
     
     server = smtplib.SMTP('smtp-mail.outlook.com', port = 587)
     server.starttls()
