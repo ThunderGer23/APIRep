@@ -18,15 +18,6 @@ pas ='Wellneverdie.201'
 Token = 'daa39d53-6283-47a1-b945-b7ee6528dde0'
 
 def messagealert(nameFile: str, addressee: str):
-    server = smtplib.SMTP('smtp-mail.outlook.com', port = 587)
-    server.starttls()
-    server.login(correo, pas)
-    message = email.mime.multipart.MIMEMultipart()
-    message['From'] = correo
-    message['To'] = addressee
-    message['Subject'] = f"Resultados de plagio encontrados en {nameFile}"
-    body = mR()
-    message.attach(email.mime.text.MIMEText(body, 'plain'))
     time = ri(1500, 2400) # (24-40)min
     scrapp = time*.05   # ApiScrapp
     unam = scrapp *.03
@@ -75,6 +66,15 @@ def messagealert(nameFile: str, addressee: str):
         else:
             rep = 0
 
+    server = smtplib.SMTP('smtp-mail.outlook.com', port = 587)
+    server.starttls()
+    server.login(correo, pas)
+    message = email.mime.multipart.MIMEMultipart()
+    message['From'] = correo
+    message['To'] = addressee
+    message['Subject'] = f"Resultados de plagio encontrados en {nameFile}"
+    body = mR()
+    message.attach(email.mime.text.MIMEText(body, 'plain'))
     routeFile = f'./documents/{nameFile}.pdf'
     file = open(routeFile, 'rb')
     adjunct = email.mime.base.MIMEBase('application', 'octet-stream')

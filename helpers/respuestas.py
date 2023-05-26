@@ -150,7 +150,6 @@ resp2 = [
 ]
 
 
-
 def messageAPICutRespUNAM():
     return resp1[ran(0, len(resp1))]
 
