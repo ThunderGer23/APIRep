@@ -1,15 +1,36 @@
-import smtplib
-import email.mime.multipart
-import email.mime.base
-import os
 from email.mime.text import MIMEText
+from reportlab.lib.pagesizes import A4
+from reportlab.pdfbase import pdfmetrics
+from reportlab.pdfbase.ttfonts import TTFont
+from reportlab.pdfgen import canvas
+import email.mime.base
+import email.mime.multipart
+import os
+import smtplib
 
-def createFile():
-    c = canvas.Canvas("hola-mundo.pdf")
-    c.drawString(50, 50, "¡Hola, mundo!")
+#Tamaño de la hoja
+W,H=A4
+
+def createFile(nameFile = 'Pruebas' ):
+    pdf = canvas.Canvas(f'./documents/{nameFile}.pdf',pagesize=A4)
+    pdfmetrics.registerFont(TTFont('FUTURAM','./helpers/FUTURAM.ttf'))
+    pdf.setFont("FUTURAM", 12)
+    pdf.drawString(100, 200, "Ingrese un texto:")
+
+    # Comienza el formulario
+    pdf.acroForm.textfield(name='texto', x=200, y=200, width=200, height=20)
     
+    # Agrega un campo de verificación para realizar la modificación
+    pdf.acroForm.checkbox(
+        name='modificar', x=200, y=160, buttonStyle='check',
+        borderColor=None, fillColor=None,
+        borderWidth=0, borderStyle=None,
+        fieldFlags='radio'
+    )
 
-    c.save()
+    pdf.save()
+
+createFile()
 
 def email():
     # Crea la conexión SMTP
