@@ -49,11 +49,11 @@ def createFile(nameFile: str):
     #Titulo lado Izquierdo
     createText(c,8,-5,-140,18,'Reporte de Texto')
     Res = {}
-    if(nameFile == "Athenea"):
+    if(nameFile == "Propuesta de sistema para detectar originalidad en Tesis a matricular"):
         Res = ResAt
     elif(nameFile == "Diseño Construcción Control y Operación de un Brazo Manipulador"):
         Res = ResBr
-    elif(nameFile == "Cubo"):
+    elif(nameFile == "Intelectuales, Exilio y Periodismo en cuba durante la Rev Mex"):
         Res = ResCu
     elif(nameFile == "Sistema de Domótica Móvil SIDOM"):
         Res = ResDom
