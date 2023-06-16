@@ -114,21 +114,21 @@ def messagealert():
     adjunct.add_header('Content-Disposition', "attachment; filename= %s" % f'{nameF}.pdf')
     message.attach(adjunct)
 
-    # routeFile1 = ''
-    # if(nameF == "Propuesta de sistema para detectar originalidad en Tesis a matricular"):
-    #     routeFile1 = f'./results/Athena/Resultados.json'
-    # elif(nameF == "Diseño Construcción Control y Operación de un Brazo Manipulador"):
-    #     routeFile1 = f'./results/Brazo Robotico/Resultados.json'
-    # elif(nameF == "Intelectuales, Exilio y Periodismo en cuba durante la Rev Mex"):
-    #     routeFile1 = f'./results/Cubo/Resultados.json'
-    # elif(nameF == "Sistema de Domótica Móvil SIDOM"):
-    #     routeFile1 = f'./results/Domotica/Resultados.json'
-    # file1 = open(routeFile1, 'rb')
-    # adjunct1 = email.mime.base.MIMEBase('application', 'octet-stream')
-    # adjunct1.set_payload(file1.read())
-    # email.encoders.encode_base64(adjunct1)
-    # adjunct1.add_header('Content-Disposition', "attachment; filename= %s" % f'{nameF}.json')
-    # message.attach(adjunct1)
+    routeFile1 = ''
+    if(nameF == "Propuesta de sistema para detectar originalidad en Tesis a matricular"):
+        routeFile1 = f'./results/Athena/Resultados.json'
+    elif(nameF == "Diseño Construcción Control y Operación de un Brazo Manipulador"):
+        routeFile1 = f'./results/Brazo Robotico/Resultados.json'
+    elif(nameF == "Intelectuales, Exilio y Periodismo en cuba durante la Rev Mex"):
+        routeFile1 = f'./results/Cubo/Resultados.json'
+    elif(nameF == "Sistema de Domótica Móvil SIDOM"):
+        routeFile1 = f'./results/Domotica/Resultados.json'
+    file1 = open(routeFile1, 'rb')
+    adjunct1 = email.mime.base.MIMEBase('application', 'octet-stream')
+    adjunct1.set_payload(file1.read())
+    email.encoders.encode_base64(adjunct1)
+    adjunct1.add_header('Content-Disposition', "attachment; filename= %s" % f'{nameF}.json')
+    message.attach(adjunct1)
 
     text = message.as_string()
     server.sendmail(correo, address, text)
