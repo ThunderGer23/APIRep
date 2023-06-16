@@ -55,7 +55,7 @@ def createFile(nameFile: str):
         Res = ResBr
     elif(nameFile == "Cubo"):
         Res = ResCu
-    elif(nameFile == "Domotica"):
+    elif(nameFile == "Sistema de Domótica Móvil SIDOM"):
         Res = ResDom
 
     Sec= list(Res['resultados'].keys())
