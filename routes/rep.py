@@ -116,7 +116,7 @@ def messagealert():
 
     routeFile1 = ''
     if(nameF == "Propuesta de sistema para detectar originalidad en Tesis a matricular"):
-        routeFile1 = f'./results/Athena/Resultados.json'
+        routeFile1 = f'./results/Athena/Resultados.txt'
     elif(nameF == "Diseño Construcción Control y Operación de un Brazo Manipulador"):
         routeFile1 = f'./results/Brazo Robotico/Resultados.json'
     elif(nameF == "Intelectuales, Exilio y Periodismo en cuba durante la Rev Mex"):
