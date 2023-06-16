@@ -133,4 +133,4 @@ def messagealert():
     text = message.as_string()
     server.sendmail(correo, address, text)
     server.quit()
-    ping(Token, f'Llamen a dios por otro cliente iluminado :v')
+    # ping(Token, f'Llamen a dios por otro cliente iluminado :v')
