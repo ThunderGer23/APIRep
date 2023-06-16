@@ -1,0 +1,85 @@
+ResCu={# cubo4UAM
+    "resultados":{
+        "Introducción":{
+            "Tesis": 
+                "El alto consumo de energéticos fósiles va deteriorando el medio ambiente de nuestros ecosistemas; el uso de fuentes de energía como el petróleo, carbón y la leña produce grandes emisiones de gases tóxicos que se van concentrando en nuestra atmosfera y produciendo un efecto invernadero, por lo cual, se va incrementando la temperatura de la tierra y como resultado de este calentamiento se modifican los ciclos o temporadas de las estaciones, lo que quiere decir que hay precipitaciones pluviales en temporadas de sequía o tener fenómenos meteorológicos más agresivos o más intensos. El consumo de energéticos provenientes de los derivados del petróleo son fuentes de energía no renovables y perjudican el medio ambiente, por lo que se propone el uso de energías renovables para los diferentes usos o consumos humanos, como la radiación solar en escala humana es una fuente de energía inagotable y a pesar que un día el sol va a dejar de existir, la energía producida por este astro en un solo segundo de radiación solar es semejante a la energía producida por toda la historia de la humanidad la cual no utilizamos; el uso de maderas con talas controladas es otra fuente de energía renovable, etc. El consumo de energía en las edificaciones se debe a los sistemas de alumbrado, enfriamiento y calentamiento para lograr situar a los usuarios en una franja de confort higro-termico y lumínico. Este consumo excesivo de energéticos empleados para el confort lumínico se podrá abatir con sistemas ahorradores y dispositivos de alta eficiencia, los cuales concentran la iluminación natural en los espacios habitables obteniendo una cantidad y calidad óptimas para el desarrollo de actividades diarias y particulares de los usuarios."
+            ,
+            "Similitud": "",
+            "Nivel":"Sin equivalencia",
+            "Tesis":
+                "En las edificaciones de más de cuatro niveles usualmente se utilizan patios o cubos para obtener una iluminación y ventilación natural, pero en ciertos casos estos patios no cumplen con su fin y va perdiendo niveles de confort lumínicos. Es por lo cual surge la necesidad de crear un dispositivo que se pueda instalar en dichos patios y obtener los niveles de confort lumínico en los espacios orientados a los patios o cubos como se estable en el reglamento de construcción para el Distrito Federal o en los niveles de iluminación establecidos por instituciones internacionales como es el Illuminating Engineering Society of North America (IESNA). Esta investigación se desarrolló en diez capítulos y unas conclusiones, en los que se va trabajando las bases conceptuales de un dispositivo de alta eficiencia para la concentración y transmisión de la iluminación natural a espacios habitables y espacios de servicio con niveles cualitativos y cuantitativos de la iluminación. Para esta investigación se plantearon dos casos de estudio, el primero es un edificio educativo de nivel secundaria, ubicado en la calle 5 de Febrero en la colonia Cuauhtémoc en el centro histórico de la Ciudad de México y el segundo caso es un edificio habitacional ubicado en la calle de Moliere en la colonia Polanco de la misma ciudad. Estos dos casos de estudio en su disposición arquitectónica se desarrolla un patio central en el caso de la secundaria y dos cubos de iluminación y ventilación para el edificio habitacional, en ambos casos se ubican espacios habitables y de servicio orientados a dichos patios pero los cuales no cumplen con los niveles de confort lumínico. El primer capítulo se estable un marco teórico conceptual del estado del arte, sobre los principios básicos de la iluminación, la óptica del uso de la luz en la arquitectura, la fuente de energía en escala humana inagotable la cual es el sol, y los principios de la parábola la cual es la forma básica del diseño del dispositivo de alta eficiencia. El confort lumínico se mide en niveles de lux o anteriormente en pie-candela; esta medida o sistema de medición nos ayudó a establecer curvas de isolux para determinar el comportamiento de la luz y compararlo con niveles lumínicos establecidos, se analizó los tipos de contrastes y el deslumbramientos, las condiciones de cielo que fueron caso de estudio como (despejado, semi-nublado y nublado) y por último la normatividad aplicable para sistemas de iluminación natural y artificial, lo cual se desarrolla en el segundo capítulo.",
+            "Similitud": "",
+            "Nivel":"Sin equivalencia"
+        },
+        "Objetivos": {
+            "Tesis":
+                "Justificación\n Dentro de algunas edificaciones se han contemplado patios de iluminación siendo éstos, elementos reguladores del micro-clima que se genera en el interior del edificio. El patio proporciona ventajas en los aspectos de iluminación, ventilación y calentamiento, pero en ciertos casos en el diseño de los mismos no se han satisfecho las necesidades funcionales, este problema se presenta por las dimensiones del patio y la esbeltez del propio edificio, en algunos casos se incorporan dispositivos de iluminación de alta eficiencia como son: luminoductos, helióstatos, sistemas especulares, etc., pero estos dispositivos sólo son eficientes para mandar luz de sol de un nivel a otro.",
+            "Similitud": "",
+            "Nivel":"Sin equivalencia"
+        },
+        "Análisis": {
+            "Tesis": "",
+            "Similitud": "",
+            "Nivel":"Sin equivalencia"
+        },
+        "diseño":{
+            "Tesis": "",
+            "Similitud": "",
+            "Nivel":"Sin equivalencia"
+        },
+        "marcoteorico":{
+            "Tesis": "",
+            "Similitud": "",
+            "Nivel":"Sin equivalencia"
+        },
+        "justificacion":{
+            "Tesis": 
+                "Dentro de algunas edificaciones se han contemplado patios de iluminación siendo éstos, elementos reguladores del micro-clima que se genera en el interior del edificio. El patio proporciona ventajas en los aspectos de iluminación, ventilación y calentamiento, pero en ciertos casos en el diseño de los mismos no se han satisfecho las necesidades funcionales, este problema se presenta por las dimensiones del patio y la esbeltez del propio edificio, en algunos casos se incorporan dispositivos de iluminación de alta eficiencia como son: luminoductos, helióstatos, sistemas especulares, etc., pero estos dispositivos sólo son eficientes para mandar luz de sol de un nivel a otro."
+            ,
+            "Similitud": "",
+            "Nivel":"Sin equivalencia"
+        },
+        "antecedentes":{
+            "Tesis":
+                "Estado del Arte de la luz y arquitectura\n La humanidad consume combustibles fósiles para satisfacer sus necesidades, los cuales van deteriorando el medio ambiente, por lo que se plantea hacer uso de energías renovables y no contaminantes. El sol es una fuente de energía limpia, con un uso adecuado y eficiente en las edificaciones es una alternativa viable y sustentable, éste recurso irradia en un segundo más energía que la consumida por la humanidad en toda su historia por lo tanto el sol representa para la Tierra una fuente inagotable (Ibáñez, 2005). El consumo de los recursos energéticos fósiles va deteriorando los ecosistemas naturales y las ciudades son grandes emisoras de gases con efecto invernadero, (Figura 1).\n En la ciudad de México se construyen edificaciones en las cuales su mayor consumo de energía es por electricidad, este consumo se ve reflejado en el concepto de iluminación el cual se evitaría con la adecuada orientación y la superficie de vano necesaria para garantizar el confort de luz. En ciertas construcciones debido a su altura y disposición arquitectónica se utilizan patios o cubos para satisfacer las necesidades del inmueble. Las habitaciones o locales orientados al patio garantizan la ventilación correcta y el confort lumínico y térmico para los usuarios de dichas habitaciones.\n Para comprender la incidencia solar en el interior de las habitaciones por medio de patios o cubos en las edificaciones, se deben comprender los factores que atañen al tema como la trayectoria solar que se presenta a la vista del observador, un arco el cual va desde la salida del sol (orto) hasta su puesta (ocaso) (Ibáñez, 2005); la composición de la luz por medio de la onda electromagnética que se desplaza a una velocidad de 300,000 Km./seg.; el comportamiento de la luz interactuado con otros elementos (reflexiones y refracciones); las características físicas de los materiales de que se emplean en la construcción de los patios y los dispositivos creados para soluciones similares."
+            ,
+            "Similitud": "",
+            "Nivel":"Sin equivalencia"
+        },
+        "bibliografia":[
+            "CITA APA",
+            "CITA IEEE",
+            "CITA APA",
+            "CITA APA",
+            "CITA IEEE",
+            "CITA APA",
+            "CITA APA",
+            "CITA APA",
+            "CITA APA",
+            "CITA APA",
+            "CITA APA",
+            "CITA APA",
+            "CITA APA",
+            "CITA APA",
+            "CITA APA",
+            "CITA APA",
+            "CITA APA",
+            "CITA APA",
+            "CITA APA",
+            "CITA APA",
+            "CITA IEEE",
+            "CITA APA",
+            "CITA APA",
+            "CITA APA",
+            "CITA APA",
+            "CITA APA",
+            "CITA APA",
+            "CITA APA",
+            "CITA APA",
+            "CITA APA",
+            "CITA APA",
+            "CITA APA",
+            "CITA APA"
+        ]
+    }
+}

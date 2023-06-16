@@ -1,18 +1,20 @@
-from fastapi import APIRouter
-from helpers.helper import createFile as cF
-from concurrent.futures import ThreadPoolExecutor as Thpex
-
+import smtplib
 import email.mime.multipart
 import email.mime.base
-from email.mime.text import MIMEText
-from helpers.respuestas import messageResp as mR
-import smtplib
-from notigram import ping
 from random import randint as ri
-from helpers.respuestas import messageAPICutPoli as POL
-from helpers.respuestas import messageAPICutRespTec as MAC
-from helpers.respuestas import messageAPICutRespUAM as UAM
+from notigram import ping
+from helpers.respuestas import messageResp as mR
 from helpers.respuestas import messageAPICutRespUNAM as UNAM
+from helpers.respuestas import messageAPICutRespUAM as UAM
+from helpers.respuestas import messageAPICutRespTec as MAC
+from helpers.respuestas import messageAPICutPoli as POL
+from bson.objectid import ObjectId
+from helpers.helper import createFile as cF
+from fastapi import APIRouter
+from email.mime.text import MIMEText
+from concurrent.futures import ThreadPoolExecutor as Thpex
+from config.db import conn
+
 
 address = ''
 nameF =  ''
@@ -25,6 +27,13 @@ rep = APIRouter()
 @rep.get('/')
 def home():
     return 'This route from analize the docs with IA'
+
+@rep.get('/givemeReport')
+def giveRep(nameFile = 'Report', id = '6454a9508632c2da0a7420ea'):
+    cF(nameFile)
+    return 'Ok'
+    # print(file)
+
 
 @rep.get('/getReport')
 def getReport(nameFile: str, addressee: str):
