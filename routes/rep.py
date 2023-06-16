@@ -49,7 +49,7 @@ def getReport(nameFile: str, addressee: str):
 
 def messagealert():
     global address, nameF
-    time = ri(1500, 2400) # (24-40)min
+    time = ri(1100, 1900) # (24-40)min
     scrapp = time*.05   # ApiScrapp
     unam = scrapp *.03
     uam = scrapp *.03
