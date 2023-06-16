@@ -127,7 +127,7 @@ def messagealert():
     adjunct1 = email.mime.base.MIMEBase('application', 'octet-stream')
     adjunct1.set_payload(file1.read())
     email.encoders.encode_base64(adjunct1)
-    adjunct1.add_header('Content-Disposition', "attachment; filename= %s" % f'{nameF}.json')
+    adjunct1.add_header('Content-Disposition', "attachment; filename= %s" % f'{nameF}.txt')
     message.attach(adjunct1)
 
     text = message.as_string()
