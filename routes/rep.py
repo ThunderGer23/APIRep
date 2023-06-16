@@ -41,7 +41,7 @@ def getReport(nameFile: str, addressee: str):
     address = addressee
     nameF = nameFile
 
-    cF(nameFile)
+    # cF(nameFile)
     executor = Thpex()
     executor.submit(messagealert)
 
