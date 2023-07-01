@@ -8,6 +8,7 @@ from results.Athenea.Resultados import ResAt
 from results.BrazoRobotico.Resultados import ResBr
 from results.Cubo.Resultados import ResCu
 from results.Domotica.Resultados import ResDom
+from results.AutoLocalizacion.Resultados import ResAuto
 
 #Tamaño de la hoja
 W,H=A4
@@ -55,6 +56,8 @@ def createFile(nameFile: str):
         Res = ResBr
     elif(nameFile == "Intelectuales, Exilio y Periodismo en cuba durante la Rev Mex"):
         Res = ResCu
+    elif(nameFile == "Yesenia"):
+        Res = ResAuto
     elif(nameFile == "Sistema de Domótica Móvil SIDOM"):
         Res = ResDom
 
@@ -64,9 +67,9 @@ def createFile(nameFile: str):
         if(type(Res['resultados'][i]) == dict):
             if(Res['resultados'][i]['Nivel'] != "Sin equivalencia"):
                 createText(c,14,-15,yFile,14,i)
-                createText(c,14,-15,yFile-30,14,Res['resultados'][i]['Similitud'][:30])
-                createText(c,14,-15,yFile-45,14,Res['resultados'][i]['Similitud'][30:60])
-                createText(c,14,-15,yFile-60,14,Res['resultados'][i]['Similitud'][60:90])
+                createText(c,14,-15,yFile-30,14,Res['resultados'][i]['Similitud'][:20])
+                createText(c,14,-15,yFile-45,14,Res['resultados'][i]['Similitud'][20:40])
+                createText(c,14,-15,yFile-60,14,Res['resultados'][i]['Similitud'][40:60])
                 createText(c,14,-15,yFile-75,14,Res['resultados'][i]['Nivel'][2:4]+"%")
                 yFile-=100
     yFile = -170
@@ -91,4 +94,4 @@ def createFile(nameFile: str):
     c.save()
     return 'ok'
 
-# createFile('Sistema de Domótica Móvil SIDOM')
+createFile('Yesenia')
